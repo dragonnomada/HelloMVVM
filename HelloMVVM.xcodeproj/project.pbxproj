@@ -16,6 +16,11 @@
 		EBEFCFE52A2091F3000CA445 /* HelloMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFCFE42A2091F3000CA445 /* HelloMVVMTests.swift */; };
 		EBEFCFEF2A2091F3000CA445 /* HelloMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFCFEE2A2091F3000CA445 /* HelloMVVMUITests.swift */; };
 		EBEFCFF12A2091F3000CA445 /* HelloMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFCFF02A2091F3000CA445 /* HelloMVVMUITestsLaunchTests.swift */; };
+		EBEFD0012A20939D000CA445 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFCFFF2A20939D000CA445 /* HelloViewController.swift */; };
+		EBEFD0022A20939D000CA445 /* HelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBEFD0002A20939D000CA445 /* HelloViewController.xib */; };
+		EBEFD0062A2094E7000CA445 /* HelloDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFD0042A2094E6000CA445 /* HelloDetailViewController.swift */; };
+		EBEFD0072A2094E7000CA445 /* HelloDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBEFD0052A2094E6000CA445 /* HelloDetailViewController.xib */; };
+		EBEFD00A2A209724000CA445 /* HelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFD0092A209724000CA445 /* HelloViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		EBEFCFEA2A2091F3000CA445 /* HelloMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEFCFEE2A2091F3000CA445 /* HelloMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMVVMUITests.swift; sourceTree = "<group>"; };
 		EBEFCFF02A2091F3000CA445 /* HelloMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EBEFCFFF2A20939D000CA445 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		EBEFD0002A20939D000CA445 /* HelloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloViewController.xib; sourceTree = "<group>"; };
+		EBEFD0042A2094E6000CA445 /* HelloDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloDetailViewController.swift; sourceTree = "<group>"; };
+		EBEFD0052A2094E6000CA445 /* HelloDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloDetailViewController.xib; sourceTree = "<group>"; };
+		EBEFD0092A209724000CA445 /* HelloViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,8 @@
 		EBEFCFCC2A2091F1000CA445 /* HelloMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				EBEFD0082A209716000CA445 /* ViewModels */,
+				EBEFCFFD2A20937A000CA445 /* Views */,
 				EBEFCFCD2A2091F1000CA445 /* AppDelegate.swift */,
 				EBEFCFCF2A2091F1000CA445 /* SceneDelegate.swift */,
 				EBEFCFD12A2091F1000CA445 /* ViewController.swift */,
@@ -125,6 +137,41 @@
 				EBEFCFF02A2091F3000CA445 /* HelloMVVMUITestsLaunchTests.swift */,
 			);
 			path = HelloMVVMUITests;
+			sourceTree = "<group>";
+		};
+		EBEFCFFD2A20937A000CA445 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBEFD0032A2094C9000CA445 /* HelloDetail */,
+				EBEFCFFE2A209382000CA445 /* Hello */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBEFCFFE2A209382000CA445 /* Hello */ = {
+			isa = PBXGroup;
+			children = (
+				EBEFCFFF2A20939D000CA445 /* HelloViewController.swift */,
+				EBEFD0002A20939D000CA445 /* HelloViewController.xib */,
+			);
+			path = Hello;
+			sourceTree = "<group>";
+		};
+		EBEFD0032A2094C9000CA445 /* HelloDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EBEFD0042A2094E6000CA445 /* HelloDetailViewController.swift */,
+				EBEFD0052A2094E6000CA445 /* HelloDetailViewController.xib */,
+			);
+			path = HelloDetail;
+			sourceTree = "<group>";
+		};
+		EBEFD0082A209716000CA445 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EBEFD0092A209724000CA445 /* HelloViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +281,8 @@
 				EBEFCFDA2A2091F3000CA445 /* LaunchScreen.storyboard in Resources */,
 				EBEFCFD72A2091F3000CA445 /* Assets.xcassets in Resources */,
 				EBEFCFD52A2091F1000CA445 /* Main.storyboard in Resources */,
+				EBEFD0022A20939D000CA445 /* HelloViewController.xib in Resources */,
+				EBEFD0072A2094E7000CA445 /* HelloDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBEFCFD22A2091F1000CA445 /* ViewController.swift in Sources */,
+				EBEFD00A2A209724000CA445 /* HelloViewModel.swift in Sources */,
 				EBEFCFCE2A2091F1000CA445 /* AppDelegate.swift in Sources */,
 				EBEFCFD02A2091F1000CA445 /* SceneDelegate.swift in Sources */,
+				EBEFD0062A2094E7000CA445 /* HelloDetailViewController.swift in Sources */,
+				EBEFD0012A20939D000CA445 /* HelloViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +493,7 @@
 				INFOPLIST_FILE = HelloMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +520,7 @@
 				INFOPLIST_FILE = HelloMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
