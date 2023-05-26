@@ -9,23 +9,36 @@ import UIKit
 
 class HelloDetailViewController: UIViewController {
 
+    lazy var viewModel: HelloDetailViewModel = {
+        let viewModel = HelloDetailViewModel(view: self)
+        
+        return viewModel
+    }()
+    
+    var message: String?
+    
+    var close: (Int) -> Void = {_ in}
+    
     @IBOutlet weak var detailsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Hello Detail"
 
-        // Do any additional setup after loading the view.
+        viewModel.showMessage(message: message ?? "???")
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendResultAction(_ sender: Any) {
+        close(Int.random(in: 1...1000))
     }
-    */
 
+}
+
+extension HelloDetailViewController: HelloDetailDelegate {
+    
+    func updateLabel(text: String) {
+        detailsLabel.text = text
+    }
+    
 }

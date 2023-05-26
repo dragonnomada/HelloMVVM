@@ -20,7 +20,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigationController = UINavigationController()
         
-        navigationController.pushViewController(HelloViewController(), animated: true)
+        let helloViewController = HelloViewController()
+        
+        navigationController.pushViewController(helloViewController, animated: true)
+        
+        helloViewController.addHandler = { message in
+            let helloDetailViewController = HelloDetailViewController()
+            
+            helloDetailViewController.message = message
+            
+            helloViewController.present(helloDetailViewController, animated: true)
+//            navigationController.pushViewController(helloDetailViewController, animated: true)
+            
+            helloDetailViewController.close = { result in
+                helloViewController.viewModel.showResult(result: result)
+                helloDetailViewController.dismiss(animated: true)
+//                navigationController.popViewController(animated: true)
+            }
+        }
         
         window?.rootViewController = navigationController
     }

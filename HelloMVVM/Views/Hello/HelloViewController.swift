@@ -9,6 +9,14 @@ import UIKit
 
 class HelloViewController: UIViewController {
     
+    lazy var viewModel: HelloViewModel = {
+        let viewModel = HelloViewModel(self)
+        
+        return viewModel
+    }()
+    
+    var addHandler: (String) -> Void = {_ in}
+    
     @IBOutlet weak var helloLabel: UILabel!
     
     override func viewDidLoad() {
@@ -22,11 +30,19 @@ class HelloViewController: UIViewController {
     }
     
     @objc func addAction(sender: UIBarButtonItem) {
-        print(sender)
+        addHandler("This is a message")
     }
 
     @IBAction func helloAction(_ sender: Any) {
-        helloLabel.text = "Hi there"
+        viewModel.sayHello()
     }
 
+}
+
+extension HelloViewController: HelloDelegate {
+    
+    func updateTitle(title: String) {
+        helloLabel.text = title
+    }
+    
 }
